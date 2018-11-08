@@ -1,3 +1,7 @@
+TWITTER_STOP_WORDS =set(['replies','retweeted','retweets','quote', 'reply', 'account',
+                         'more', 'retweet', 'likes', 'search', 'twitter', 'uct',
+                        'university', 'cape', 'town', 'tweets', 'https', 'http', 'like']) 
+
 def general_clean(text, lst_to_remove):
     # remove punctuation, numbers
     text = text.replace("[^a-zA-Z#]", " ")
