@@ -881,6 +881,7 @@ def stage3(process_folder, label):
     kernel = rank_kernel(path_stage2)
 
     with open(path_stage3, 'w') as f:
+        # TODO: Send sentences for LSTM NN or other sequence NN
         for s in top_sentences(kernel, path_stage1):
             f.write(pretty_print(s._asdict()))
             f.write("\n")
