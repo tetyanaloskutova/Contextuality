@@ -874,6 +874,7 @@ def stage2(process_folder, label):
 
 #Stage 3
 def stage3(process_folder, label):
+    path_stage1 =process_folder + label + 'stage1.json'
     path_stage2 = process_folder + label + 'stage2.json'
 
     path_stage3 = process_folder + label + 'stage3.json'
