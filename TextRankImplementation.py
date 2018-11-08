@@ -857,7 +857,7 @@ def stage2(process_folder, label):
     path_stage1 =process_folder + label + 'stage1.json'
     
     from spacy.lang.en.stop_words import STOP_WORDS
-    TWITTER_STOP_WORDS =set(['replies','retweeted','retweets','quote', 'reply', 'account','more']) 
+    
 
     path_stage2 = process_folder + label + 'stage2.json'
 
@@ -865,7 +865,7 @@ def stage2(process_folder, label):
     render_ranks(graph, ranks)
 
     with open(path_stage2, 'w') as f:
-        for rl in normalize_key_phrases(path_stage1, ranks, stopwords=STOP_WORDS.union(TWITTER_STOP_WORDS)):
+        for rl in normalize_key_phrases(path_stage1, ranks, stopwords=STOP_WORDS.union(STOP_WORDS)):
             f.write("%s\n" % pretty_print(rl._asdict()))
             # to view output in this notebook
             #print(pretty_print(rl))
