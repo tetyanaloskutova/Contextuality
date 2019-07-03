@@ -4,7 +4,33 @@
 # Copied from someone's implementation, which I cannot find anymore..
 # modified for Contextuality purposes
 
+"""
+Usage:
+The processing is done in stages to make it easier to see the intermediate results:
+1. Run stage1. Sorry for the dodgy path processing: 
+ process_folder = "C:\\textrank"
+ label = "example1\\"
+ text = [paste your text here]
+ stage1(process_folder, text, label)
+ 
+2. Run stage2.
+stage2(process_folder, label)
 
+3. Run stage3.
+stage3(process_folder, label)
+
+4.a. If you want to get keyphrases as your output, run:
+stage4phrases(process_folder, label)
+
+OR
+
+4.b. If you want to get excerpt as your output, run 
+(you will need some text generating ability to conjugate the words in the excerpt better):
+stage4excerpt(process_folder, label)
+
+Note: you can rerun stages with adjustments from any stage, this is useful to save time
+as the processing can be resource-intensive.
+"""
 
 
 from collections import namedtuple
